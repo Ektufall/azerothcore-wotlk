@@ -399,7 +399,7 @@ enum WeaponAttackType
     MAX_ATTACK
 };
 
-enum CombatRating
+enum CombatRating : uint8
 {
     CR_WEAPON_SKILL             = 0,
     CR_DEFENSE_SKILL            = 1,
@@ -430,7 +430,7 @@ enum CombatRating
 
 #define MAX_COMBAT_RATING         25
 
-enum DamageEffectType
+enum DamageEffectType : uint8
 {
     DIRECT_DAMAGE           = 0,                            // used for normal weapon damage (not for class abilities or spells)
     SPELL_DIRECT_DAMAGE     = 1,                            // spell/class abilities damage
@@ -711,7 +711,7 @@ struct DiminishingReturn
     uint32                  hitCount;
 };
 
-enum MeleeHitOutcome
+enum MeleeHitOutcome : uint8
 {
     MELEE_HIT_EVADE, MELEE_HIT_MISS, MELEE_HIT_DODGE, MELEE_HIT_BLOCK, MELEE_HIT_PARRY,
     MELEE_HIT_GLANCING, MELEE_HIT_CRIT, MELEE_HIT_CRUSHING, MELEE_HIT_NORMAL
@@ -993,7 +993,7 @@ struct DeclinedName
     std::string name[MAX_DECLINED_NAME_CASES];
 };
 
-enum CurrentSpellTypes
+enum CurrentSpellTypes : uint8
 {
     CURRENT_MELEE_SPELL             = 0,
     CURRENT_GENERIC_SPELL           = 1,

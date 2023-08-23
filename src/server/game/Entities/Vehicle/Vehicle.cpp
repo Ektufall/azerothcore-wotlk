@@ -429,6 +429,7 @@ bool Vehicle::AddPassenger(Unit* unit, int8 seatId)
         //end npcbot
     }
 
+
     if (_me->IsInWorld())
     {
         unit->SendClearTarget();                                // SMSG_BREAK_TARGET
