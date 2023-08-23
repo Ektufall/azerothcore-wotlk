@@ -2226,15 +2226,18 @@ void Pet::InitTalentForLevel()
 }
 
 uint8 Pet::GetMaxTalentPointsForLevel(uint8 level)
+
 {
     uint8 points = (level >= 20) ? ((level - 16) / 4) : 0;
     // Mod points from owner SPELL_AURA_MOD_PET_TALENT_POINTS
     if (Unit* owner = GetOwner())
+    {
+        points *= sWorld->getRate(RATE_TALENT); // Apply worldserver.conf RATE_TALENT value
         points += owner->GetTotalAuraModifier(SPELL_AURA_MOD_PET_TALENT_POINTS);
-
-    sScriptMgr->OnCalculateMaxTalentPointsForLevel(this, level, points);
+    }
 
     return points;
+
 }
 
 void Pet::ToggleAutocast(SpellInfo const* spellInfo, bool apply)
