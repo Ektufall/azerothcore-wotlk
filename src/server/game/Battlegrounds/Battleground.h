@@ -252,6 +252,7 @@ enum SpiritOfCompetitionEvent
     SPELL_SPIRIT_OF_COMPETITION_PARTICIPANT = 48163,
     SPELL_SPIRIT_OF_COMPETITION_WINNER      = 48164,
 };
+
 constexpr auto BG_STARTING_EVENT_COUNT = 4;
 
 class ArenaLogEntryData
@@ -354,6 +355,7 @@ public:
 
     // Spirit of Competition event
     bool SpiritofCompetitionEvent(PvPTeamId winnerTeamId);
+
     bool IsRandom() { return m_IsRandom; }
 
     // Set methods:

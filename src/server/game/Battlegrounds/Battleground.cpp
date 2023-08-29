@@ -18,7 +18,6 @@
 #include "Battleground.h"
 #include "ArenaSpectator.h"
 #include "ArenaTeam.h"
-#include "ArenaTeamMgr.h"
 #include "BattlegroundBE.h"
 #include "BattlegroundDS.h"
 #include "BattlegroundMgr.h"
@@ -1065,6 +1064,7 @@ bool Battleground::SpiritofCompetitionEvent(PvPTeamId winnerTeamId)
 
     return true;
 }
+
 uint32 Battleground::GetBonusHonorFromKill(uint32 kills) const
 {
     //variable kills means how many honorable kills you scored (so we need kills * honor_for_one_kill)
